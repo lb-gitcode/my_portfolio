@@ -1,6 +1,19 @@
 @charset "utf-8";
 @import './reset.css';
 
+/* Colours */
+:root {
+  --primary-bg-colour: white;
+  --secondary-bg-colour: rgb(179, 179, 179);
+  --primary-hero-colour: rgba(255, 255, 255, 0.8);
+  --primary-text-colour: lime;
+  --secondary-text-colour: #464646;
+  --dark-mode-border: rgb(230, 230, 230);
+  --dark-mode-colour: rgb(240, 240, 240);
+  --dark-mode-text: black;
+  --dark-mode-hover: rgb(200, 200, 200);
+}
+
 /* Formatting */
 .container {
   width: min(100% - 30px, 1080px);
@@ -12,10 +25,26 @@
 /* Header */
 header {
   display: flex;
-  margin: 10px;
+  padding: 10px 30px;
   height: 75px;
-  line-height: 75px;
+  line-height: 55px;
   justify-content: space-between;
+  background-color: var(--primary-bg-colour);
+  color: var(--primary-text-colour);
+  border-bottom: 1px solid var(--secondary-bg-colour);
+  nav ul { 
+    list-style: none;
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    a { 
+      color: var(--primary-text-colour);
+      line-height: 60px;
+      font-size: 20px;
+      font-weight: 600;
+      text-decoration: none; 
+    }
+   }
 }
 
 #options {
@@ -23,21 +52,25 @@ header {
   cursor: pointer;
 }
 
+#options:hover {
+  rotate: 90deg;
+}
+
 /* Pop-up */
 #pop-up-modal {
-  visibility: visible;
+  visibility: hidden;
   opacity: 0;
-  background-color: white;
-  border: 1px solid gray;
+  background-color: var(--primary-bg-colour);
+  border: 1px solid var(--secondary-bg-colour);
   box-shadow: 1px 1px 2px #c5c5c5;
-  height: 300px;
+  height: 350px;
   width: 600px;
   margin: auto;
   border-radius: 5px;
   padding: 10px;
   z-index: 1;
   position: fixed;
-  top: 50%;
+  top: 47.5%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -45,9 +78,11 @@ header {
 #close-modal {
   user-select: none;
   font-weight: 750;
-  border: 1px solid gray;
+  border: 1px solid var(--secondary-bg-colour);
   border-radius: 5px;
-  background-color: #c5c5c5;
+  background-color: var(--secondary-bg-colour);
+  color: var(--primary-bg-colour);
+  border-color: var(--dark-mode-border);
   font-size: 20px;
   width: 30px;
   height: 30px;
@@ -59,8 +94,8 @@ header {
 
 #close-modal:hover { 
   cursor: pointer; 
-  background-color: gray;
-  border-color: black;
+  background-color: var(--dark-mode-hover);
+  border-color: var(--dark-mode-border);
 }
 
 .options-box {
@@ -81,14 +116,25 @@ header {
   padding: 5px 20px;
   display: flex;
   justify-content: space-between;
+  color: var(--dark-mode-text);
 }
+
+.options-choice label { 
+  font-size: 20px;
+  font-weight: 500;
+ }
 
 #dark-mode {
   padding: 5px;
   width: 50px;
+  background-color: var(--dark-mode-colour);
+  border: 1px solid var(--dark-mode-border);
+  color: var(--dark-mode-text);
   border-radius: 10px;
-  margin-right: 30px;
+  /* margin-right: 30px; */
 }
+
+#dark-mode:hover { scale: 1.08; }
 
 /* Hero Banner */
 .hero-banner {
@@ -99,13 +145,17 @@ header {
   justify-content: center; 
   text-align: center;
   background-color: #c5c5c5;
+  border-bottom: 1px solid var(--secondary-bg-colour);
 }
 
 .hero-text {
-  border: 1px solid black;
-  padding: 10px;
+  border: 1px solid var(--secondary-bg-colour);
+  background-color: var(--primary-hero-colour);
+  color: var(--secondary-text-colour);
+  border-radius: 5px;
+  padding: 100px;
   h2 { font-size: 50px; }
-  p { font-size: 18px; }
+  p { font-size: 20px; }
 }
 
 /* About Me */
@@ -116,5 +166,20 @@ header {
 footer {
   height: 150px;
   width: 100%;
-  background-color: black;
+  background-color: var(--primary-bg-colour);
+  border-top: 1px solid var(--secondary-bg-colour);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+
+.footer-icon {
+  font-size: 50px;
+  color: var(--primary-text-colour);
 }

@@ -35,3 +35,38 @@ listen('click', closeModal, function() {
   popUpModal.style.opacity = '0';
   popUp = false;
 });
+
+// dark mode
+
+// get elements
+const darkModeButton = getElement('dark-mode');
+let darkMode = false;
+
+const root = select(':root');
+function colourSet(property, colour) {
+  root.style.setProperty(property, colour);
+}
+
+function toggleDarkMode() {
+  if (darkMode === false) {
+    darkModeButton.value = 'ON';
+    colourSet('--primary-bg-colour', 'rgb(65, 65, 65)');
+    colourSet('--secondary-bg-colour', 'rgb(40, 40, 40)');
+    colourSet('--dark-mode-border', 'black');
+    colourSet('--dark-mode-colour', 'rgb(43, 43, 43)');
+    colourSet('--dark-mode-hover', 'rgb(50, 50, 50)');
+    colourSet('--dark-mode-text', 'white');
+    darkMode = true;
+  } else if (darkMode === true) {
+    darkModeButton.value = 'off';
+    colourSet('--primary-bg-colour', 'white');
+    colourSet('--secondary-bg-colour', 'rgb(179, 179, 179)');
+    colourSet('--dark-mode-border', 'rgb(230, 230, 230)');
+    colourSet('--dark-mode-colour', 'rgb(240, 240, 240)');
+    colourSet('--dark-mode-hover', 'rgb(200, 200, 200)');
+    colourSet('--dark-mode-text', 'black');
+    darkMode = false;
+  }
+}
+
+listen('click', darkModeButton, toggleDarkMode);
