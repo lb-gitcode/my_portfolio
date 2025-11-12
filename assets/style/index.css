@@ -1,1 +1,72 @@
+@charset "utf-8";
 @import './reset.css';
+
+/* Formatting */
+.container {
+  width: min(100% - 30px, 1080px);
+  margin-inline: auto;
+}
+
+* { transition: all 0.2s ease-in-out; }
+
+/* Header */
+header {
+  display: flex;
+  margin: 10px;
+  height: 75px;
+  justify-content: space-between;
+}
+
+#options {
+  line-height: 50px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* Pop-up */
+#pop-up-modal {
+  visibility: hidden;
+  opacity: 0;
+  background-color: white;
+  border: 1px solid gray;
+  box-shadow: 1px 1px 2px #c5c5c5;
+  height: 300px;
+  width: 500px;
+  margin: auto;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#close-modal {
+  user-select: none;
+  font-weight: 750;
+  border: 1px solid gray;
+  border-radius: 5px;
+  background-color: #c5c5c5;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  float: right;
+  text-align: center;
+  line-height: 25px;
+  margin-left: auto;
+}
+
+#close-modal:hover { 
+  cursor: pointer; 
+  background-color: gray;
+  border-color: black;
+}
+
+/* Hero Banner */
+
+/* About Me */
+
+/* Contact Me */
+
+/* Footer */
