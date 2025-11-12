@@ -155,6 +155,9 @@ header {
   justify-content: center; 
   text-align: center;
   background-color: var(--secondary-bg-colour);
+  background-image: url('https://plus.unsplash.com/premium_photo-1675014768031-7bf2773a0b75?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-repeat: no-repeat;
+  background-size: cover;
   border-bottom: 1px solid var(--primary-border-colour);
 }
 
@@ -196,13 +199,16 @@ header {
 /* Contact Me */
 .contact { 
   background-color: var(--secondary-bg-colour);
+  background-image: url('https://plus.unsplash.com/premium_photo-1673295617212-4cfc66ed9e0d?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-repeat: no-repeat;
+  background-size: cover;
   border-top: 1px solid var(--primary-border-colour); 
 }
 
 .contact-form {
-  border: 1px solid var(--hero-border-colour);
-  background-color: var(--primary-hero-colour);
-  box-shadow: 1px 1px 2px var(--hero-border-colour);
+  border: 1px solid var(--primary-border-colour);
+  background-color: var(--primary-bg-colour);
+  box-shadow: 1px 1px 2px var(--primary-border-colour);
   border-radius: 5px;
   padding: 10px;
 }

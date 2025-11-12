@@ -51,6 +51,9 @@ function toggleDarkMode() {
   if (darkMode === false) {
     darkModeButton.value = 'ON';
     colourSet('--primary-bg-colour', 'rgb(65, 65, 65)');
+    colourSet('--primary-hero-colour', 'rgba(77, 77, 77, 0.8)');
+    colourSet('--hero-border-colour', 'rgb(80, 80, 80)');
+    colourSet('--secondary-text-colour', 'rgb(245, 245, 245)');
     colourSet('--primary-border-colour', 'rgb(40, 40, 40)');
     colourSet('--tertiary-text-colour', 'rgb(255, 255, 255)');
     colourSet('--dark-mode-border', 'rgb(30, 30, 30)');
@@ -61,6 +64,9 @@ function toggleDarkMode() {
   } else if (darkMode === true) {
     darkModeButton.value = 'OFF';
     colourSet('--primary-bg-colour', 'white');
+    colourSet('--primary-hero-colour', 'rgba(255, 255, 255, 0.8)');
+    colourSet('--hero-border-colour', 'rgb(187, 187, 187)');
+    colourSet('--secondary-text-colour', 'rgb(70, 70, 70)');
     colourSet('--primary-border-colour', 'rgb(179, 179, 179)');
     colourSet('--tertiary-text-colour', 'rgb(0, 0, 0)');
     colourSet('--dark-mode-border', 'rgb(230, 230, 230)');
