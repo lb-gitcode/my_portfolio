@@ -52,15 +52,17 @@ function toggleDarkMode() {
     darkModeButton.value = 'ON';
     colourSet('--primary-bg-colour', 'rgb(65, 65, 65)');
     colourSet('--primary-border-colour', 'rgb(40, 40, 40)');
+    colourSet('--tertiary-text-colour', 'rgb(255, 255, 255)');
     colourSet('--dark-mode-border', 'rgb(30, 30, 30)');
     colourSet('--dark-mode-colour', 'rgb(43, 43, 43)');
     colourSet('--dark-mode-hover', 'rgb(33, 33, 33)');
     colourSet('--dark-mode-text', 'white');
     darkMode = true;
   } else if (darkMode === true) {
-    darkModeButton.value = 'off';
+    darkModeButton.value = 'OFF';
     colourSet('--primary-bg-colour', 'white');
     colourSet('--primary-border-colour', 'rgb(179, 179, 179)');
+    colourSet('--tertiary-text-colour', 'rgb(0, 0, 0)');
     colourSet('--dark-mode-border', 'rgb(230, 230, 230)');
     colourSet('--dark-mode-colour', 'rgb(240, 240, 240)');
     colourSet('--dark-mode-hover', 'rgb(200, 200, 200)');
