@@ -3,14 +3,16 @@
 
 /* Colours */
 :root {
-  --primary-bg-colour: white;
-  --secondary-bg-colour: rgb(179, 179, 179);
+  --primary-bg-colour: rgb(255, 255, 255);
+  --primary-border-colour: rgb(179, 179, 179);
   --primary-hero-colour: rgba(255, 255, 255, 0.8);
-  --primary-text-colour: lime;
-  --secondary-text-colour: #464646;
+  --hero-border-colour: rgb(187, 187, 187);
+  --primary-text-colour: rgb(0, 255, 0);
+  --primary-link-hover: rgb(0, 200, 0);
+  --secondary-text-colour: rgb(70, 70, 70);
   --dark-mode-border: rgb(230, 230, 230);
   --dark-mode-colour: rgb(240, 240, 240);
-  --dark-mode-text: black;
+  --dark-mode-text: rgb(0, 0, 0);
   --dark-mode-hover: rgb(200, 200, 200);
 }
 
@@ -31,7 +33,14 @@ header {
   justify-content: space-between;
   background-color: var(--primary-bg-colour);
   color: var(--primary-text-colour);
-  border-bottom: 1px solid var(--secondary-bg-colour);
+  border-bottom: 1px solid var(--primary-border-colour);
+  box-shadow: 1px 1px 2px var(--primary-border-colour);
+  a {
+    text-decoration: none;
+    h1 { color: var(--primary-text-colour); }
+    h1:hover { color: var(--primary-link-hover); }
+  }
+  a:hover { color: var(--primary-link-hover); }
   nav ul { 
     list-style: none;
     width: 300px;
@@ -61,7 +70,7 @@ header {
   visibility: hidden;
   opacity: 0;
   background-color: var(--primary-bg-colour);
-  border: 1px solid var(--secondary-bg-colour);
+  border: 1px solid var(--primary-border-colour);
   box-shadow: 1px 1px 2px #c5c5c5;
   height: 350px;
   width: 600px;
@@ -78,9 +87,9 @@ header {
 #close-modal {
   user-select: none;
   font-weight: 750;
-  border: 1px solid var(--secondary-bg-colour);
+  border: 1px solid var(--primary-border-colour);
   border-radius: 5px;
-  background-color: var(--secondary-bg-colour);
+  background-color: var(--primary-border-colour);
   color: var(--primary-bg-colour);
   border-color: var(--dark-mode-border);
   font-size: 20px;
@@ -145,11 +154,12 @@ header {
   justify-content: center; 
   text-align: center;
   background-color: #c5c5c5;
-  border-bottom: 1px solid var(--secondary-bg-colour);
+  border-bottom: 1px solid var(--primary-border-colour);
 }
 
 .hero-text {
-  border: 1px solid var(--secondary-bg-colour);
+  border: 1px solid var(--hero-border-colour);
+  box-shadow: 1px 1px 2px var(--hero-border-colour);
   background-color: var(--primary-hero-colour);
   color: var(--secondary-text-colour);
   border-radius: 5px;
@@ -167,7 +177,7 @@ footer {
   height: 150px;
   width: 100%;
   background-color: var(--primary-bg-colour);
-  border-top: 1px solid var(--secondary-bg-colour);
+  border-top: 1px solid var(--primary-border-colour);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -183,3 +193,5 @@ footer {
   font-size: 50px;
   color: var(--primary-text-colour);
 }
+
+.footer-icon:hover { color: var(--primary-link-hover); }
