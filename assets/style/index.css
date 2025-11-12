@@ -4,6 +4,7 @@
 /* Colours */
 :root {
   --primary-bg-colour: rgb(255, 255, 255);
+  --secondary-bg-colour: rgb(197, 197, 197);
   --primary-border-colour: rgb(179, 179, 179);
   --primary-hero-colour: rgba(255, 255, 255, 0.8);
   --hero-border-colour: rgb(187, 187, 187);
@@ -71,7 +72,7 @@ header {
   opacity: 0;
   background-color: var(--primary-bg-colour);
   border: 1px solid var(--primary-border-colour);
-  box-shadow: 1px 1px 2px #c5c5c5;
+  box-shadow: 1px 1px 2px var(--secondary-bg-colour);
   height: 370px;
   width: 600px;
   margin: auto;
@@ -153,7 +154,7 @@ header {
   align-items: center;
   justify-content: center; 
   text-align: center;
-  background-color: #c5c5c5;
+  background-color: var(--secondary-bg-colour);
   border-bottom: 1px solid var(--primary-border-colour);
 }
 
@@ -170,7 +171,7 @@ header {
 }
 
 /* About Me */
-.about {
+.about, .contact {
   padding: 50px;
   display: flex;
   flex-wrap: wrap;
@@ -193,6 +194,18 @@ header {
 }
 
 /* Contact Me */
+.contact { 
+  background-color: var(--secondary-bg-colour);
+  border-top: 1px solid var(--primary-border-colour); 
+}
+
+.contact-form {
+  border: 1px solid var(--hero-border-colour);
+  background-color: var(--primary-hero-colour);
+  box-shadow: 1px 1px 2px var(--hero-border-colour);
+  border-radius: 5px;
+  padding: 10px;
+}
 
 /* Footer */
 footer {
@@ -247,21 +260,26 @@ footer {
     p { font-size: 16px; }
   }
   .container { width: min(100% - 70px, 1080px); }
-  .about div h3 { font-size: 30px; }
-  .about div p { font-size: 18px; }
+  .about div h3, .contact div h3 { font-size: 30px; }
+  .about div p, .contact div p { font-size: 18px; }
   .icon-container { width: 150px; }
   .footer-icon { font-size: 38px; }
 }
 
 @media (max-width: 370px) {
+  header nav ul { width: 120px; }
+  header nav ul li a { 
+    width: 100px;
+    font-size: 13px; 
+  }
   .hero-text {
     padding: 40px;
     h2 { font-size: 26px; }
     p { font-size: 14px; }
   }
   .container { width: min(100% - 40px, 1080px); }
-  .about div h3 { font-size: 24px; }
-  .about div p { font-size: 14px; }
+  .about div h3, .contact div h3 { font-size: 24px; }
+  .about div p, .contact div p { font-size: 14px; }
   .icon-container { width: 120px; }
   .footer-icon { font-size: 32px; }
 }
