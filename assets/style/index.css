@@ -25,13 +25,13 @@ header {
 
 /* Pop-up */
 #pop-up-modal {
-  visibility: hidden;
+  visibility: visible;
   opacity: 0;
   background-color: white;
   border: 1px solid gray;
   box-shadow: 1px 1px 2px #c5c5c5;
   height: 300px;
-  width: 500px;
+  width: 600px;
   margin: auto;
   border-radius: 5px;
   padding: 10px;
@@ -61,6 +61,33 @@ header {
   cursor: pointer; 
   background-color: gray;
   border-color: black;
+}
+
+.options-box {
+  width: 500px;
+  height: 250px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.options-choice {
+  width: 100%;
+  padding: 5px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#dark-mode {
+  padding: 5px;
+  width: 50px;
+  border-radius: 10px;
+  margin-right: 30px;
 }
 
 /* Hero Banner */
