@@ -152,7 +152,7 @@ header {
 /* Hero Banner */
 .hero-banner {
   position: relative;
-  height: calc(100svh);
+  height: calc(100svh + 10px);
   display: flex;
   align-items: center;
   justify-content: center; 
@@ -201,12 +201,33 @@ header {
 }
 
 .about ul {
+  color: var(--tertiary-text-colour);
   font-size: 20px;
   margin-left: 35px;
   li::marker {
     color: var(--primary-text-colour);
   }
 }
+
+.about-flex-container {
+  width: min(100% - 20px, 1080px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+}
+
+.about-flex-content {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 50% - 20px;
+  img { 
+    border: 1px solid var(--primary-border-colour); 
+    border-radius: 5px;
+  }
+}
+
+.about-flex-content + .about-flex-content { margin-left: 100px; }
 
 /* Contact Me */
 .contact { 
@@ -301,6 +322,21 @@ footer {
 .footer-icon:hover { color: var(--primary-link-hover); }
 
 /* Responsiveness */
+@media (max-width: 1095px) {
+  .about-flex-container {
+    width: min(100% - 10px, 1080px);
+    display: block;
+    box-sizing: border-box;
+  }
+  .about-flex-content {
+    display: flex;
+    justify-self: center;
+  }
+  .about-flex-content + .about-flex-content { 
+    margin: 30px 0 0 0;
+   }
+}
+
 @media (max-width: 590px) {
   header { justify-content: space-evenly; }
   header h1 { font-size: 20px; }
