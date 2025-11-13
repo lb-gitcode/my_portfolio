@@ -56,10 +56,10 @@ function toggleDarkMode() {
     colourSet('--secondary-text-colour', 'rgb(245, 245, 245)');
     colourSet('--primary-border-colour', 'rgb(40, 40, 40)');
     colourSet('--tertiary-text-colour', 'rgb(255, 255, 255)');
-    colourSet('--dark-mode-border', 'rgb(30, 30, 30)');
-    colourSet('--dark-mode-colour', 'rgb(43, 43, 43)');
-    colourSet('--dark-mode-hover', 'rgb(33, 33, 33)');
-    colourSet('--dark-mode-text', 'white');
+    colourSet('--primary-button-border', 'rgb(30, 30, 30)');
+    colourSet('--primary-button-colour', 'rgb(43, 43, 43)');
+    colourSet('--primary-button-hover', 'rgb(33, 33, 33)');
+    colourSet('--primary-button-text', 'white');
     darkMode = true;
   } else if (darkMode === true) {
     darkModeButton.value = 'OFF';
@@ -69,10 +69,10 @@ function toggleDarkMode() {
     colourSet('--secondary-text-colour', 'rgb(70, 70, 70)');
     colourSet('--primary-border-colour', 'rgb(179, 179, 179)');
     colourSet('--tertiary-text-colour', 'rgb(0, 0, 0)');
-    colourSet('--dark-mode-border', 'rgb(230, 230, 230)');
-    colourSet('--dark-mode-colour', 'rgb(240, 240, 240)');
-    colourSet('--dark-mode-hover', 'rgb(200, 200, 200)');
-    colourSet('--dark-mode-text', 'black');
+    colourSet('--primary-button-border', 'rgb(230, 230, 230)');
+    colourSet('--primary-button-colour', 'rgb(240, 240, 240)');
+    colourSet('--primary-button-hover', 'rgb(200, 200, 200)');
+    colourSet('--primary-button-text', 'black');
     darkMode = false;
   }
 }
