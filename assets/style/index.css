@@ -3,7 +3,7 @@
 
 /* Colours */
 :root {
-  --primary-bg-colour: rgb(241, 241, 241);
+  --primary-bg-colour: white;
   --secondary-bg-colour: rgb(197, 197, 197);
   --primary-border-colour: rgb(179, 179, 179);
   --primary-hero-colour: rgba(255, 255, 255, 0.8);
@@ -172,7 +172,7 @@ header {
   color: var(--secondary-text-colour);
   border-radius: 5px;
   padding: 100px;
-  margin-top: -150px;
+  margin-top: -110px;
   h2 { font-size: 50px; }
   p { font-size: 20px; }
 }
@@ -197,7 +197,15 @@ header {
     font-size: 20px; 
     color: var(--tertiary-text-colour);
   }
-  p + p { margin-top: 20px; }
+  p + p, p + div, p + ul { margin-top: 20px; }
+}
+
+.about ul {
+  font-size: 20px;
+  margin-left: 35px;
+  li::marker {
+    color: var(--primary-text-colour);
+  }
 }
 
 /* Contact Me */
@@ -342,7 +350,7 @@ footer {
   }
   .container { width: min(100% - 70px, 1080px); }
   .about div h3, .contact div h3 { font-size: 30px; }
-  .about div p, .contact div p, input[type=text], textarea { font-size: 18px; }
+  .about div p, .about ul, .contact div p, input[type=text], textarea { font-size: 18px; }
   .contact-form { 
     padding: 30px 30px 30px 10px; 
     h3 { margin-left: 20px; }
@@ -369,7 +377,7 @@ footer {
   }
   .container { width: min(100% - 40px, 1080px); }
   .about div h3, .contact div h3 { font-size: 24px; }
-  .about div p, .contact div p, input[type=text], textarea { font-size: 14px; }
+  .about div p, .about ul, .contact div p, input[type=text], textarea { font-size: 14px; }
   .contact-form { padding: 15px 15px 15px 0; }
   .form-input {
     justify-content: space-between;
