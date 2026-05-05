@@ -12,9 +12,9 @@
   --secondary-text-colour: rgb(70, 70, 70);
   --tertiary-text-colour: rgb(0, 0, 0);
   --primary-link-hover: rgb(0, 200, 0);
-  --primary-button-border: rgb(230, 230, 230);
-  --primary-button-colour: rgb(240, 240, 240);
-  --primary-button-hover: rgb(200, 200, 200);
+  --primary-button-border: rgb(184, 184, 184);
+  --primary-button-colour: rgb(223, 223, 223);
+  --primary-button-hover: rgb(192, 192, 192);
 }
 
 /* Formatting */
